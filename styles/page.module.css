@@ -1,6 +1,5 @@
-/* Background and Page Styling */
 .pageContainer {
-  background-image: url('/images/background.jpg'); /* Your background image */
+  background-image: url('/images/background.jpg'); /* Ensure this file exists */
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -9,30 +8,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centers everything vertically */
+  justify-content: center;
   text-align: center;
 }
 
-/* Banner Styling */
 .bannerContainer {
   width: 100%;
-  max-width: 1200px; /* Adjust the width of the banner */
-  margin: 0 auto; /* Center the banner */
-  height: 300px; /* Set the desired height for the banner */
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 300px;
   overflow: hidden;
 }
 
 .bannerImage {
   width: 100%;
-  height: 100%; /* Ensure it takes up the full height of its container */
-  object-fit: cover; /* Ensures the image fills the area without distortion */
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Content Section Styling */
 .contentContainer {
   text-align: center;
   padding: 20px;
-  margin-top: 50px; /* Adds space between the banner and the content */
+  margin-top: 50px;
 }
 
 .heading {
@@ -44,27 +41,31 @@
 .paragraph {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  max-width: 600px; /* Limits the width of the paragraph */
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.5; /* Makes the text more readable */
-  font-weight: lighter;
+  line-height: 1.5;
 }
 
-/* Go to Polls Button Styling */
-.voteButton {
+.navButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
   background-color: #007bff;
   color: white;
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 10px 20px;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px; /* Adds space between the text and the button */
+  transition: background-color 0.3s;
 }
 
-.voteButton:hover {
+.button:hover {
   background-color: #0056b3;
 }

@@ -1,33 +1,27 @@
-'use client'; // Ensure it's a client component
+'use client';
 
-import Image from 'next/image';
-import Link from 'next/link'; // Import Link from Next.js
-import styles from '../styles/page.module.css'; // Correct path for styles
+import Link from 'next/link';
+import styles from '../styles/page.module.css';
 
 export default function HomePage() {
   return (
     <div className={styles.pageContainer}>
-      {/* Banner Image */}
-      <div className={styles.bannerContainer}>
-        <Image 
-          src="/images/banner.jpg" 
-          alt="PublicVoice Banner" 
-          width={1200} 
-          height={300} // Smaller height value for the banner
-          className={styles.bannerImage} 
-        />
-      </div>
+      <h1>Welcome to the PublicVoice Dashboard. Navigate to explore feedback, surveys, reports, and polls.</h1>
+      
 
-      {/* Content */}
-      <div className={styles.contentContainer}>
-        <h1 className={styles.heading}>Welcome to PublicVoice</h1>
-        <p className={styles.paragraph}>
-          Your platform to vote on community improvements, give feedback, and participate in polls.
-        </p>
-
-        {/* Go to Polls Button */}
+      {/* Navigation Buttons */}
+      <div className={styles.navButtons}>
+        <Link href="/feedback">
+          <button className={styles.button}>Feedback</button>
+        </Link>
         <Link href="/polls">
-          <button className={styles.voteButton}>Go to Polls</button> {/* Using button directly inside Link */}
+          <button className={styles.button}>Polls & Voting</button>
+        </Link>
+        <Link href="/survey">
+          <button className={styles.button}>Survey</button>
+        </Link>
+        <Link href="/report">
+          <button className={styles.button}>Report</button>
         </Link>
       </div>
     </div>
